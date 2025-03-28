@@ -12,8 +12,7 @@
 <h2 align="center">About the Prisoner Riddle</h2>
 
 <div class="info">
-    <p>The n-Prisoners Riddle is a problem in probability theory.
-    In the problem, a group (of size n, where n is even) of numbered prisoners is given the prospect of
+    <p>The n-Prisoners Riddle is a problem in probability theory in which a group (of size n, where n is a positive and even integer) of numbered prisoners is given the prospect of
     clemency if each prisoner can find a slip of paper containing their number in one of n randomly-sorted drawers
     within n/2 tries. However, if even one prisoner fails, all of the prisoners will
     be executed. The prisoners are allowed to communicate before the first prisoner opens
@@ -24,9 +23,9 @@
     <p>a dismal probability for any value of n.</p>
     <p>A more intelligent approach to this problem involves starting at the drawer that matches the prisoner's number
     and selecting the next drawer based on the contents of the current drawer. This strategy relies on the fact that
-    the assignment of the prisoners' numbers to the drawers creates cycles, and starting with the prisoner's own number
+    the assignment of the prisoners' numbers to the drawers is a one-to-one permutation that contains cycles, and starting with the prisoner's own number
     guarantees that they are on the correct cycle.</p>
-    <p>This strategy is successful if there exists no cycles greater than n/2. The probability that a uniformly distributed
+    <p>This strategy is effective if there exists no cycle greater than n/2. The probability that a uniformly distributed
     random permutation contains no cycles greater than n/2 is given by</p>
     <p align="center" class="math"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>-</mo><mo>(</mo><mfenced><mrow><mfrac><mn>1</mn><mrow><mfrac><mi>n</mi><mn>2</mn></mfrac><mo>+</mo><mn>1</mn></mrow></mfrac><mo>+</mo><mo>.</mo><mo>.</mo><mo>.</mo><mo>+</mo><mfrac><mn>1</mn><mi>n</mi></mfrac></mrow></mfenced><mo>)</mo></math>,</p>
     <p>giving the prisoners a significantly better probability of survival than the naive approach.</p>
