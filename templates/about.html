@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About This Website - Prisoner Problem Simulator</title>
+    <link rel="stylesheet" type= "text/css" href={{ url_for('static', filename='home.css') }}>
+</head>
+<body>
+
+{% include 'header.html' %}
+
+<h2 align="center">About the Prisoner Problem</h2>
+
+<div class="info">
+    <p>The n-Prisoners Problem is a problem in probability theory.
+    In the problem, an even number (n) of numbered prisoners are given the prospect of
+    clemency if each prisoner can find a slip of paper containing their number in one of n randomly-sorted drawers
+    within n/2 tries. However, if even one prisoner fails, all of the prisoners will
+    be executed. The prisoners are allowed to communicate before the first prisoner opens
+    a drawer, but communication is barred afterward.</p>
+    <p>The naive approach to this problem assumes that each prisoner has a 50% chance of
+    opening the correct drawer. The probability of success for this approach is</p>
+    <p align="center" class="math"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>0.5</mn><mi>n</mi></msup></math>,</p>
+    <p>a dismal probability for any value of n.</p>
+    <p>A more intelligent approach to this problem involves starting at the drawer that matches the prisoner's number
+    and selecting the next drawer based on the contents of the current drawer. This strategy relies on the fact that
+    the assignment of the prisoners' numbers to the drawers creates cycles, and starting with the prisoner's own number
+    guarantees that they are on the correct cycle.</p>
+    <p>This strategy is successful if there exists no cycles greater than n/2. The probability that a uniformly distributed
+    random permutation contains no cycles greater than n/2 is given by</p>
+    <p align="center" class="math"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>-</mo><mo>(</mo><mfenced><mrow><mfrac><mn>1</mn><mrow><mfrac><mi>n</mi><mn>2</mn></mfrac><mo>+</mo><mn>1</mn></mrow></mfrac><mo>+</mo><mo>.</mo><mo>.</mo><mo>.</mo><mo>+</mo><mfrac><mn>1</mn><mi>n</mi></mfrac></mrow></mfenced><mo>)</mo></math>,</p>
+    <p>giving the prisoners a significantly better probability of survival than the naive approach.</p>
+</div>
+
+<h2 align="center">About the Law of Large Numbers</h2>
+<div class="info">
+    <p>The Law of Large Numbers is a law in probability theory that states that given a sample of independent and identically distributed values,
+        the sample mean converges to the true mean as the sample size increases. This law is important because it guarantees stable long-term results for the averages of some
+        random events.</p>
+    <p>In the case of the n-Prisoners Problem, we should expect the rate of success for a sample of randomly-generated
+    simulations to converge to the probability that a uniformly distributed random permutation containing values [1, n] contains no cycles greater than n/2
+    as more simulations are run.</p>
+</div>
+
+</body>
+</html>
